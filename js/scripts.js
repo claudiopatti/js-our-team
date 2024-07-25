@@ -42,11 +42,17 @@ const team = [
     },
 ];
 
-for (let i = 0; i < team.length; i++) {
+const cardTeamHtml = document.getElementById('cardTeam')
 
+for (let i = 0; i < team.length; i++) {
+    let card = document.createElement('div');
+
+
+    card.innerHTML += ` name: ${team[i].name} role: ${team[i].role} image: ${team[i].image}` 
     
     console.log('-  name:', team[i].name , typeof team[i].name);
     console.log('-  role:', team[i].role, typeof team[i].role);
     console.log('-  image:', team[i].image, typeof team[i].image);
 
+    cardTeamHtml.append(card)
 };
